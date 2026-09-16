@@ -49,14 +49,20 @@ func main() {
 
 	http.HandleFunc("/ws", handleWebSocket)
 
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "3000"
+	}
+
 	server := &http.Server{
-		Addr:         ":8080",
+		Addr:         ":" + port,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 	}
 
 	go func() {
-		log.Printf("WebSocket server starting on :8080\n")
+		log.Printf("WebSocket server starting on :%v\n", port)
 
 		if err := server.ListenAndServe(); err != http.ErrServerClosed {
 			log.Fatalf("Server error: %v", err)

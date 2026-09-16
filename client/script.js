@@ -12,7 +12,7 @@ var paintColor = "black"
 var paintSize = 1
 var options_hidden = false
 
-const SOCKET = new WebSocket("ws://localhost:8080/ws")
+const SOCKET = new WebSocket("wss://realpainter.vercel.app/ws")
 
 SOCKET.onopen = (event) => {
     console.log("Websocket connection opened")
