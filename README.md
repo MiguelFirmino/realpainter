@@ -22,7 +22,7 @@ The canvas
 
 ## Preview🏳️
 
-<img src="github-images/realpainter.png"> </img>
+<img src="github-images/realpainter.PNG"> </img>
 
 ## Concepts Applied🏴
 
