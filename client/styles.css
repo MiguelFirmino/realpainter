@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+}
+
+#canvas-map {
+    margin: 5rem auto 0 auto;
+    height: 50rem;
+    width: 100rem;
+    border-color: #5a5a5aaf;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    display: flex;
+    flex-flow: column;
+}
+
+.canvas-row {
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
+}
+
+.canvas-node {
+    background-color: white;
+    display: block;
+    justify-items: center;
+    border-color: #5a5a5aaf;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    flex-grow: 1;
+    user-select: none;
+}
+
+.canvas-node:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+
+.options-panel {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.paint-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    background-color: white;
+    border-color: #5a5a5aaf;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+}
+
+.paint-options p {
+    margin: 0;
+}
+
+.color-buttons {
+    padding-bottom: 0.5rem;
+}
+
+.paint-options button,
+.hide-button {
+    height: 2rem;
+    width: 4rem;
+    border: 1px solid black;
+    margin: 0 0.2rem;
+}
+
+.hide-button {
+    margin: 0 auto;
+}
+
+.paint-options button:hover,
+.hide-button:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.paint-options button.toggled {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.black {
+  background-color: #161616;
+  color: white;  
+}
+
+.red {
+    background-color: #EB0800;
+    color: darkred;
+}
+
+.blue {
+    background-color: #000CAD;
+}
+
+.yellow {
+    background-color: #F4C610;
+}
+
+.green {
+    background-color: #4DA815;
+}
+
+.erase {
+    background-color: white;
+}
+
+.size-buttons button {
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
