@@ -47,8 +47,9 @@ func main() {
 	hub = NewHub()
 	go hub.Run()
 
-	http.Handle("/", http.FileServer(http.Dir("./client")))
 	http.HandleFunc("/ws", handleWebSocket)
+
+	http.Handle("/", http.FileServer(http.Dir("./client")))
 
 	port := os.Getenv("PORT")
 
